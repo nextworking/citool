@@ -47,7 +47,8 @@ var setVersion= &cobra.Command{
 			}
 		} else if metaVer.Compare(GitVer) == 1 {
 			fmt.Println("metadata version > git tag. we are doing stuff now")
-     		fmt.Println(cit.SetGitTag(Path, metaVer.String()))
+     		fmt.Printf("Adding tag %v\n", metaVer.String())
+			fmt.Println(cit.SetGitTag(Path, metaVer.String()))
 		}
 
 	},
