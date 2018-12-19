@@ -13,7 +13,7 @@ func PushGitTag(d string) string {
 	out, err := cmd.CombinedOutput()
 	fmt.Printf("path: %v\n", string(out))
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "error in pushTag: %v\n", err)
+		fmt.Fprintf(os.Stderr, "error in pushTag: %v\n", out)
 		os.Exit(1)
 	}
 
