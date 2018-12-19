@@ -6,7 +6,6 @@ import (
 	"os/exec"
 )
 
-
 func FetchGetGitTags(d string) string {
 
 	fmt.Println("fetching tags")
@@ -18,5 +17,4 @@ func FetchGetGitTags(d string) string {
 		os.Exit(1)
 	}
 	return string(out)
-}	
-
+}
