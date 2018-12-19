@@ -6,7 +6,7 @@ import (
 	"os/exec"
 )
 
-func PushGitTag(d string, ver string) string {
+func PushGitTag(d string) string {
 
 	cmd := exec.Command("git", "push", "--tags")
 	cmd.Dir = d
