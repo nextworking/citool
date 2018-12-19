@@ -13,7 +13,7 @@ func FetchGetGitTags(d string) string {
 	cmd.Dir = d
 	out, err := cmd.CombinedOutput()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "error in setTag: %v\n", out)
+		fmt.Fprintf(os.Stderr, "error in fetchGitTag: %v\n", string(out))
 		os.Exit(1)
 	}
 	return string(out)
