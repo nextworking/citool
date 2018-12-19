@@ -11,7 +11,7 @@ func PushGitTag(d string) string {
 	cmd := exec.Command("git", "push", "--tags")
 	cmd.Dir = d
 	out, err := cmd.CombinedOutput()
-	fmt.Printf("path: %v\n", string(out))
+	fmt.Printf("Push git tag: %v\n", string(out))
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "error in pushTag: %v\n", string(out))
 		os.Exit(1)
